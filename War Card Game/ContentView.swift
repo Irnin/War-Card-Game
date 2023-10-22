@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State  var cards: [Card] = []
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        List{
+            VStack(alignment: .center) {
+                Button {
+                    generateCards()
+                } label: {
+                    Text("Generate Cards")
+                }
+                
+                ForEach(cards, id: \.self) { card in
+                    Image(card.getLabel())
+                }                
+            }
+            .padding()
         }
-        .padding()
+        
+    }
+    
+    func generateCards() {
+        cards.removeAll()
+        let suits: [Card.Suit] = [.Hearts, .Diamonds, .Clubs, .Spades]
+        
+        for value in Card.Value.allCases {
+            cards.append(Card(value: value, suit: suits.randomElement()!))
+        }
     }
 }
 
