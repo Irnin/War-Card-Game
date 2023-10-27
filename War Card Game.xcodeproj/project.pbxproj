@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		821F1B372AEB0B1C002BD465 /* WarStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F1B362AEB0B1C002BD465 /* WarStack.swift */; };
+		821F1B392AEBB324002BD465 /* CardStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821F1B382AEBB324002BD465 /* CardStackView.swift */; };
 		8273DAA42AE46706004CBBC6 /* War_Card_GameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8273DAA32AE46706004CBBC6 /* War_Card_GameApp.swift */; };
 		8273DAA62AE46706004CBBC6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8273DAA52AE46706004CBBC6 /* ContentView.swift */; };
 		8273DAA82AE46708004CBBC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8273DAA72AE46708004CBBC6 /* Assets.xcassets */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		821F1B362AEB0B1C002BD465 /* WarStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarStack.swift; sourceTree = "<group>"; };
+		821F1B382AEBB324002BD465 /* CardStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardStackView.swift; sourceTree = "<group>"; };
 		8273DAA02AE46706004CBBC6 /* War Card Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "War Card Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8273DAA32AE46706004CBBC6 /* War_Card_GameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = War_Card_GameApp.swift; sourceTree = "<group>"; };
 		8273DAA52AE46706004CBBC6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,8 +49,8 @@
 		8273DA972AE46706004CBBC6 = {
 			isa = PBXGroup;
 			children = (
-				8273DAA22AE46706004CBBC6 /* War Card Game */,
 				8273DAA12AE46706004CBBC6 /* Products */,
+				8273DAA22AE46706004CBBC6 /* War Card Game */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,15 +65,17 @@
 		8273DAA22AE46706004CBBC6 /* War Card Game */ = {
 			isa = PBXGroup;
 			children = (
-				8273DAA32AE46706004CBBC6 /* War_Card_GameApp.swift */,
-				8273DAA52AE46706004CBBC6 /* ContentView.swift */,
-				8273DAB12AE469F2004CBBC6 /* Player.swift */,
-				8273DAB32AE46A2D004CBBC6 /* Game.swift */,
 				8273DAA72AE46708004CBBC6 /* Assets.xcassets */,
-				8273DAA92AE46708004CBBC6 /* Preview Content */,
 				8273DAB72AE46A61004CBBC6 /* Card.swift */,
+				8273DAA52AE46706004CBBC6 /* ContentView.swift */,
+				8273DAB32AE46A2D004CBBC6 /* Game.swift */,
 				8273DAB92AE48CF0004CBBC6 /* GameView.swift */,
+				821F1B362AEB0B1C002BD465 /* WarStack.swift */,
+				821F1B382AEBB324002BD465 /* CardStackView.swift */,
 				8273DABB2AE4BCD8004CBBC6 /* MenuView.swift */,
+				8273DAB12AE469F2004CBBC6 /* Player.swift */,
+				8273DAA92AE46708004CBBC6 /* Preview Content */,
+				8273DAA32AE46706004CBBC6 /* War_Card_GameApp.swift */,
 			);
 			path = "War Card Game";
 			sourceTree = "<group>";
@@ -153,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8273DABC2AE4BCD8004CBBC6 /* MenuView.swift in Sources */,
+				821F1B372AEB0B1C002BD465 /* WarStack.swift in Sources */,
 				8273DAA62AE46706004CBBC6 /* ContentView.swift in Sources */,
+				821F1B392AEBB324002BD465 /* CardStackView.swift in Sources */,
 				8273DAB22AE469F2004CBBC6 /* Player.swift in Sources */,
 				8273DAB82AE46A61004CBBC6 /* Card.swift in Sources */,
 				8273DAA42AE46706004CBBC6 /* War_Card_GameApp.swift in Sources */,

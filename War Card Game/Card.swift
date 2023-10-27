@@ -38,6 +38,9 @@ class Card: Hashable, Equatable {
     var value: Value
     var suit: Suit
     var isVisable: Bool
+    var offsetX: CGFloat = 0
+    var offsetY: CGFloat = 0
+    var rotatnion: Double = 0.0
 
     internal init(value: Value, suit: Suit, isVisiable: Bool = true) {
         self.value = value
@@ -93,5 +96,19 @@ class Card: Hashable, Equatable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(value)
         hasher.combine(suit)
+    }
+    
+    func throwCard() {
+        // Przesunięcie X
+        var move = Int.random(in: 10...20)
+        var modify = Int.random(in: 2...3) % 2 == 0 ? 1 : -1
+        offsetX = CGFloat(modify * move)
+        
+        // Przesunięcie Y
+        move = Int.random(in: 10...20)
+        modify = Int.random(in: 2...3) % 2 == 0 ? 1 : -1
+        offsetY = CGFloat(modify * move)
+        
+        rotatnion = Double.random(in: -25...25)
     }
 }

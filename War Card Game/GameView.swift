@@ -52,17 +52,44 @@ struct GameView: View {
                 .padding()
                 
                 Spacer()
-
-                ScrollView(.horizontal) {
-                    HStack{
-                        ForEach(game.cardsStack, id: \.self) { card in
-                            Image(card.getLabel())
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: nil)
+                
+                HStack {
+                    Spacer()
+                    
+                    VStack {
+                        ZStack {
+                            ForEach(game.getCardsOnTableCPU(), id: \.self) { card in
+                                Image(card.getLabel())
+                                    .resizable()
+                                    .offset(x: card.offsetX, y: card.offsetY)
+                                    .rotationEffect(.degrees(card.rotatnion))
+                                    .scaledToFit()
+                                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: nil)
+                            }
+                        }
+                        Spacer()
+                    }
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Spacer()
+                        
+                        ZStack {
+                            ForEach(game.getCardsOnTablePlayer(), id: \.self) { card in
+                                Image(card.getLabel())
+                                    .resizable()
+                                    .offset(x: card.offsetX, y: card.offsetY)
+                                    .rotationEffect(.degrees(card.rotatnion))
+                                    .scaledToFit()
+                                    .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: nil)
+                            }
                         }
                     }
+                                        
+                    Spacer()
                 }
+
                 
                 Spacer()
                 
@@ -115,8 +142,6 @@ struct GameView: View {
                     .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     .foregroundColor(.red)
             }
-            
-            
         }
     }
     
